@@ -1,5 +1,7 @@
 // добавили библиотеку лодаш тротл
-const throttle = require('lodash.throttle');
+// const throttle = require('lodash.throttle');
+import throttle from 'lodash.throttle'
+
 
 // ключ локалсторидж
 const STORAGE_KEY = 'feedback-form-state'
@@ -13,7 +15,7 @@ const refs = {
 
 //добавили слушателя на форму
 refs.form.addEventListener('submit', onFormSabmit)
-refs.form.addEventListener('input', throttle(onInputareaInput, 500) )
+refs.form.addEventListener('input', throttle(onInputareaInput, 250) )
 
 // обьект хранилище для данных localStorage
 const formData = {} 
